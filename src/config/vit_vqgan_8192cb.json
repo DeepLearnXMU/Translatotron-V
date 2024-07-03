@@ -1,0 +1,8 @@
+{
+    "dim": 256, 
+    "image_size": 512, 
+    "patch_size": 16, 
+    "num_layers": 4, 
+    "vq_codebook_dim": 64, 
+    "vq_codebook_size": 8192
+}
