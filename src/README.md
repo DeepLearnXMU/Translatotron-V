@@ -19,7 +19,7 @@ python -m torch.distributed.launch --nproc_per_node=8 train_mgpu.py \
 Then train the IIMT model
 
 ```
-python -m torch.distributed.launch --nproc_per_node=8 run_at_enc_dec_tit_with_attn_auxiliary_distill.py \
+python -m torch.distributed.launch --nproc_per_node=8 run_translatotron_v.py \
     --train_lmdb_path $train_dir \
     --valid_lmdb_path $valid_dir \
     --per_device_train_batch_size 5 \
@@ -50,7 +50,7 @@ python -m torch.distributed.launch --nproc_per_node=8 run_at_enc_dec_tit_with_at
 ## Inference
 
 ```
-python -m torch.distributed.launch --nproc_per_node=8 run_test_distill.py \
+python -m torch.distributed.launch --nproc_per_node=8 run_test.py \
     --test_lmdb_path $test_dir \
     --per_device_test_batch_size 8 \
     --src_lang de \
